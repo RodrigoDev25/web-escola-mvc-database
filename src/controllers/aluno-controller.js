@@ -14,6 +14,7 @@ function deletarAluno(req, res) {
     res.send("Função controller responsável por deletar alunos")
 }
 
+
 //___Exportação de Funções___//
 module.exports = { 
     listarAlunos,

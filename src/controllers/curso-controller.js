@@ -1,5 +1,9 @@
-function listarCursos(req, res) {
-    res.send("Função controller responsável pela listagem dos cursos")
+const cursoModel = require("../models/curso-model")
+
+async function listarCursos(req, res) {
+const listarTodosCursoss = await cursoModel.listarTodosCursos()
+res.json(
+    listarTodosCursoss)
 }
 
 function cadastrarCurso(req, res) {
@@ -13,9 +17,13 @@ function atualizarCurso(req, res) {
 function deletarCurso(req, res) {
     res.send("Função controller responsável por deletar cursos")
 }
+//__________________________________________________________________________//
 
+
+
+//__________________________________________________________________________//
 //___Exportação de Funções___//
-module.exports = { 
+module.exports = {
     listarCursos,
     cadastrarCurso,
     atualizarCurso,
