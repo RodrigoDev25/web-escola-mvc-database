@@ -2,8 +2,8 @@ const cursoModel = require("../models/curso-model")
 
 async function listarCursos(req, res) {
 const listarTodosCursoss = await cursoModel.listarTodosCursos()
-res.json(
-    listarTodosCursoss)
+    res.render("listar-cursos", {listarTodosCursoss})
+   
 }
 
 function cadastrarCurso(req, res) {

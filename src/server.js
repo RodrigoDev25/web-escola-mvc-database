@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 5000 
 
+app.set('view engine', "ejs")
+app.set("views", "./src/views")
+
 //Importação de Controllers//
 const cursoController = require("./controllers/curso-controller")
 const professorController = require("./controllers/professor-controller")
